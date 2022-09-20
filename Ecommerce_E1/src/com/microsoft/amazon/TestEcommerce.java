@@ -31,6 +31,8 @@ public class TestEcommerce {
 	registeredUserList.getUserList();
 	
 	System.out.println("THANK YOU FOR VISITING AMAZON HAVE A GREAT DAY");
+	System.out.println("---------😊----------- 😊----------😊-------- ");
+
 	
 	}
 

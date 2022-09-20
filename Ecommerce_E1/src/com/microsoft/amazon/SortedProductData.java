@@ -23,6 +23,8 @@ public class SortedProductData extends ConnectionDetails {
      ResultSet rs = prepareStatement.executeQuery();
 	
      System.out.println("Displaying Sorted product list by product name");
+	 System.out.println("----------------------------------------------");
+
      Thread.sleep(1000);
      
 	 while(rs.next()) {	

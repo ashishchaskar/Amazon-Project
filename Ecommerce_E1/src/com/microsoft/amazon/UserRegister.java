@@ -29,8 +29,9 @@ public class UserRegister extends ConnectionDetails  {
 	
 	                    int k = prepareStatement.executeUpdate();
 	                    
-	         System.out.println("Data inserted successfully " + k);           
-	             
+	         System.out.println("Data inserted successfully ");           
+			 System.out.println("----------------------------");
+     
 	                   
 		        }catch(Exception e) {
 		    	 
@@ -47,18 +48,20 @@ public class UserRegister extends ConnectionDetails  {
 		
 			System.out.println("Enter Username");
 			username = scanner.nextLine();
-			
+			System.out.println("----------------");
 			System.out.println("Enter Mobile number");
 			mobile_number = scanner.nextLine();
-		
-			System.out.println("Enter email id");
+			System.out.println("----------------");
+            System.out.println("Enter email id");
 			email_id=scanner.nextLine();
-			
+			System.out.println("----------------");
+
 			if(email_id.endsWith(emailFormat)) {
 				
 				System.out.println("Enter Password");
 				user_password=scanner.nextLine();
-				
+				System.out.println("----------------");
+
 
 				registerUser(username,mobile_number,email_id,user_password);
 				

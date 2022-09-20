@@ -31,7 +31,9 @@ public class AddToCart extends ConnectionDetails implements Ecommerce {
 		  System.out.println("We have such attractive products available You can select the product");
 		  
 		  Thread.sleep(1200);
-		  
+		 
+		  System.out.println("\tNAME" + "   " +"\tPRICE" + "     "+ "\tQUANTITY" );
+
 		  while(rs.next()) {
 			  
 	    List<String> inner=new LinkedList<String>();
@@ -41,9 +43,8 @@ public class AddToCart extends ConnectionDetails implements Ecommerce {
 		Price=rs.getString("Price");
         Quantity=rs.getString("Quantity");
         outer.addAll(inner);
-		
-	  System.out.println(Name + " "+ Price+ " "+Quantity);
-		
+	  System.out.println("\t"+Name +"        "+ "\t"+ Price+ "   " +"\t"+Quantity);
+		  
 	  Thread.sleep(1200);
 	  }
 		  

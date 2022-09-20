@@ -9,6 +9,8 @@ public class RegisteredUserList extends ConnectionDetails {
 	public void getUserList() {
 		
 		System.out.println(" Displaying registered users list...");
+		System.out.println("------------------------------------");
+
 		try {
 			Thread.sleep(1200);
 		} catch (InterruptedException e1) {

@@ -16,20 +16,25 @@ public class Admin extends ConnectionDetails {
 		
 		System.out.println("Enter admin username");
         String s1 = scanner.nextLine();		
-		
+		System.out.println("--------------------");
+
         System.out.println("Enter admin password");
         String s2=scanner.nextLine();
+		System.out.println("--------------------");
+
         
         if((s1.equals(adminUserName))&&(s2.equals(adminPassword))) {
         	
         	System.out.println("Admin successfully logged in....");
-        	Thread.sleep(1200);
+    		System.out.println("--------------------------------");
+            Thread.sleep(1200);
         	System.out.println("Hey Admin please check Available Product name And Quantity");
         	Thread.sleep(1200);
-        	
+    		System.out.println("----------------------------------------------------------");
+
         	try {
         	
-        	Connection connection = getConnectionDetails();
+        Connection connection = getConnectionDetails();
         	
         	//Prepare Statement
        PreparedStatement prepareStatement = connection.prepareStatement("select Product_id,Name,Quantity from products_table");
@@ -54,6 +59,8 @@ public class Admin extends ConnectionDetails {
    }else {
         	
         	System.err.println("Please enter correct admin username password");
+			System.out.println("--------------------------------------------");
+
         	getAdmin();
         	
         }
