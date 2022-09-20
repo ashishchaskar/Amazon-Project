@@ -32,7 +32,9 @@ public class AddToCart extends ConnectionDetails implements Ecommerce {
 		  
 		  Thread.sleep(1200);
 		 
-		  System.out.println("\tNAME" + "   " +"\tPRICE" + "     "+ "\tQUANTITY" );
+		  System.out.printf("%30s %10s %15s ", "NAME", "PRICE", "QUANTITY");
+		  
+		  
 
 		  while(rs.next()) {
 			  
@@ -43,12 +45,15 @@ public class AddToCart extends ConnectionDetails implements Ecommerce {
 		Price=rs.getString("Price");
         Quantity=rs.getString("Quantity");
         outer.addAll(inner);
-	  System.out.println("\t"+Name +"        "+ "\t"+ Price+ "   " +"\t"+Quantity);
-		  
-	  Thread.sleep(1200);
+        System.out.printf("\n" + "%30s %10s %10s ", Name ,Price ,Quantity);		  
+	    Thread.sleep(1200);
 	  }
-		  
+		
+	  System.out.println("\n------------------------------");
+	  System.out.println("Availble Products ==>");
+	  System.out.println("----------------------");
 	  System.out.println(outer);
+	  System.out.println("\n------------------------------");
 	  Scanner scanner=new Scanner(System.in); 
 	  System.out.println("Enter the product u wanna buy");
 	  String s1= scanner.nextLine();

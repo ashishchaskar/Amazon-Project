@@ -1,4 +1,4 @@
-package com.microsoft.amazon;
+ package com.microsoft.amazon;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -6,6 +6,9 @@ import java.sql.ResultSet;
 import java.util.Scanner;
 
 public class Admin extends ConnectionDetails {
+	
+	String pName;
+	String pQuantity;
 	
 	public void getAdmin() throws InterruptedException {
 		
@@ -41,11 +44,16 @@ public class Admin extends ConnectionDetails {
        
            //execute statement
        ResultSet rs = prepareStatement.executeQuery();
-        	
+        
+		  System.out.printf("%15s  %15s ", "NAME", "QUANTITY");
+
        while (rs.next()) { 	
     	   
-    	   System.out.println(rs.getString("Name") + " " +rs.getString("Quantity") );
-    	   
+    	 pName=rs.getString("Name"); 
+    	 pQuantity=rs.getString("Quantity");
+         System.out.printf("\n" + "%15s %15s  ", pName,pQuantity);		  
+
+    	 
     	   Thread.sleep(1200);
     	   
        }
