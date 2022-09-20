@@ -67,6 +67,16 @@ public class ProductDetails extends ConnectionDetails implements Ecommerce{
 		// TODO Auto-generated method stub
 		
 	}
+	@Override
+	public void getProductDetails() {
+		// TODO Auto-generated method stub
+		
+	}
+	@Override
+	public void registerUser() {
+		// TODO Auto-generated method stub
+		
+	}
 
 }
 
