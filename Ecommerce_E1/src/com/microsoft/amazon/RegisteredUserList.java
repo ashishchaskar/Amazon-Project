@@ -8,7 +8,8 @@ public class RegisteredUserList extends ConnectionDetails {
 	
 	public void getUserList() {
 		
-		System.out.println(" Displaying registered users list...");
+    	
+        System.out.println("\n" + " Displaying registered users list...");
 		System.out.println("------------------------------------");
 
 		try {
