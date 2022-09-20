@@ -12,7 +12,7 @@ public class ConnectionDetails  {
 		
 		try {
 			
-			//Step - 1 Load the Driver class 
+			//Step - 1 Load the Driver class. 
 			Class.forName("com.mysql.cj.jdbc.Driver");
 			
 			

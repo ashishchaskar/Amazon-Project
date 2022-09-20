@@ -7,36 +7,36 @@ import java.sql.ResultSet;
 public class SortedProductData extends ConnectionDetails {
 	
 	public void getSortedProductList() {
-		
-		   try {
+	
+		try {
 			   
 		
 	 Connection connection = getConnectionDetails();
 		         
 		     //Prepare Statement
 		   
-     PreparedStatement prepareStatement = connection.prepareStatement(" Select Product_id,Name "
-				                    + "from products_table order by Product_id ");   
+     PreparedStatement prepareStatement = connection.prepareStatement(" Select Name "
+				                    + "from products_table order by Name ");   
 		    
             //Execute statement
      
      ResultSet rs = prepareStatement.executeQuery();
 	
-     System.out.println("Sorted product list");
+     System.out.println("Displaying Sorted product list by product name");
+     Thread.sleep(1000);
+     
 	 while(rs.next()) {	
 		 
 		 System.out.println(rs.getString(1));
-		 System.out.println(rs.getString(2));
-		 
-		 
-		 }
-     
-		   }catch(Exception e) { 
-			   
-			   System.out.println(e);
-			   
-			}
+		 Thread.sleep(1000);
 		
+	 }
+     
+	}catch(Exception e) { 
+			 
+		System.out.println(e);
+			   
+		}
 	}
 	
 	public static void main(String[] args) {
@@ -44,6 +44,5 @@ public class SortedProductData extends ConnectionDetails {
 		SortedProductData s= new SortedProductData();
 		s.getSortedProductList();
 	}	
-		
 }
 
