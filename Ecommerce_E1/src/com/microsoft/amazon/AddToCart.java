@@ -101,11 +101,18 @@ public class AddToCart extends ConnectionDetails implements Ecommerce {
   
   }
 
+
 @Override
-public void insertData() {
+public void getProductDetails() {
 	// TODO Auto-generated method stub
 	
-  }
+}
+
+@Override
+public void registerUser() {
+	// TODO Auto-generated method stub
+	
+}
 
 }
 
