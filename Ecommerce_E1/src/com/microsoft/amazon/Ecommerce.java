@@ -2,10 +2,8 @@ package com.microsoft.amazon;
 
 public interface Ecommerce {
 	
-	void getProductDetails();
+	 void insertData(); //implements in ProductDetails class
 	
-	 void getToCart();
+	 void getToCart();  //implements in AddToCart class
 	 
-	 void registerUser();
-
 }
