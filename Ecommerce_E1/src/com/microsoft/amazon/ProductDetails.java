@@ -40,7 +40,8 @@ public class ProductDetails extends ConnectionDetails implements Ecommerce{
 		    
 		     statement.executeUpdate(sql);
 		    
-		    System.out.println("Product list  inserted successfully " );
+		    System.out.println("Product list inserted successfully " );
+		    System.out.println("------------------------------------------");
 		    
 		} catch (Exception e) {
 			
@@ -52,8 +53,8 @@ public class ProductDetails extends ConnectionDetails implements Ecommerce{
 	
 	static {
 		   
-		   System.out.println("Welcome To Amazon Have A Great Shopping");
-		   
+		   System.out.println("\t Welcome To Amazon Have A Great Shopping");
+		   System.out.println("----------------------------------------------------");
 		   try {
 			Thread.sleep(1200);
 		} catch (Exception e) {

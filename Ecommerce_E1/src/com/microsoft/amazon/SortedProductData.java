@@ -16,13 +16,14 @@ public class SortedProductData extends ConnectionDetails {
 		     //Prepare Statement
 		   
      PreparedStatement prepareStatement = connection.prepareStatement(" Select Name "
-				                    + "from products_table order by Name ");   
+				                    + "from products_table order by Name");   
 		    
             //Execute statement
      
      ResultSet rs = prepareStatement.executeQuery();
 	
-     System.out.println("Displaying Sorted product list by product name");
+     System.out.println("\n Filtered Products Are");
+     System.out.println("------------------");
      Thread.sleep(1000);
      
 	 while(rs.next()) {	
