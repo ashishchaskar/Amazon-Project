@@ -15,15 +15,15 @@ public class TestEcommerce {
 	userRegister.getUserInputForUserRegister();
 	Thread.sleep(3000);
 	
-	AddToCart addToCart=new AddToCart();
-	addToCart.getToCart();
+	User user=new User();
+	user.checkUser();
 	Thread.sleep(3000);
-	
+
 	SortedProductData sortedProductData=new SortedProductData();
 	sortedProductData.getSortedProductList();
 	Thread.sleep(3000);
 	
-	Admin admin=new Admin();
+    Admin admin=new Admin();
 	admin.getAdmin();
 	Thread.sleep(3000);
 	
