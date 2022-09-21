@@ -10,6 +10,8 @@ public class User extends ConnectionDetails {
 	
 	public void checkUser() {
 		
+		System.out.println("----------------------------");
+		System.out.println("Enter login credentials.....");
 		Scanner scanner=new Scanner(System.in);
 		System.out.println("Enter your registered username");
 		u = scanner.nextLine();
@@ -39,24 +41,22 @@ public class User extends ConnectionDetails {
 	         }
 	    
 	    
-	    if(outer.containsKey(u)) {
+	    if((outer.containsKey(u))&&(outer.containsValue(p))){
 			  
-	    	  if(outer.containsValue(p)) {
-	    		  
-	    	 	  
-	    		  AddToCart addToCart=new AddToCart();
-				  
-				  addToCart.getToCart();
-	    		  
-	    	  }
-	    	    
-		}else {
+    		  
+  	 	  AddToCart addToCart=new AddToCart();
 			  
-			  System.err.println("Please enter valid registered username and password");
-			  User user2=new User();
-			  user2.checkUser();
-			
-		}
+			  addToCart.getToCart();
+  		  
+  	  
+  	    
+	}else {
+		  
+		  System.err.println("Please enter valid registered username and password");
+		  User user2=new User();
+		  user2.checkUser();
+		
+	}
 	       
 	  }catch(Exception e) {
 			
